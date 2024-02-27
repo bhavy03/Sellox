@@ -31,7 +31,7 @@ const Rent = () => {
   return (
     <>
       {isAuthenticated ?
-        <div className="w-full h-full py-5">
+        <div className="w-full h-full py-5 px-6">
           <div className="flex align-center justify-center items-center w-full h-screen bg-transparent">
             <form encType="multipart/form-data" className="flex flex-col w-full max-w-md p-8 bg-white rounded-lg shadow-lg" onSubmit={handleSubmit}>
               <p className=" text-center text-3xl mb-7 leading-8  font-sans font-semibold">Rent your items</p>

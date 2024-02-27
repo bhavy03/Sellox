@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 const Sell = () => {
   const { isAuthenticated } = useSelector((state) => state.card);
   // const { userdata } = useSelector((state) => state.card);
-  // console.log(userdata)
+  // console.log(userdata.user)
   const navigate = useNavigate();
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -33,7 +33,7 @@ const Sell = () => {
   return (
     <>{
       isAuthenticated ?
-        <div className="w-full ">
+        <div className="w-full px-6 ">
           <div className="flex justify-center items-center w-full h-screen bg-transparent">
             <form encType="multipart/form-data" className="flex flex-col w-full max-w-md p-6 bg-white rounded-lg shadow-xl" onSubmit={handleSubmit}>
               <p className=" text-center text-3xl mb-7 leading-8  font-sans font-semibold">Sell your items</p>

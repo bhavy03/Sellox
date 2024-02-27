@@ -11,13 +11,13 @@ const Logout = () => {
             const response = await fetch("http://localhost:3000/user/logout", {
                 credentials: "include"
             });
+            navigate("/");
             if (response.ok) {
                 const responseData = await response.json()
                 console.log(responseData);
             } else {
                 console.error("Logging out failed");
             }
-            navigate("/");
         } catch (error) {
             console.error("Error logging out:", error);
         }

@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { useDispatch } from "react-redux"
-import { setuserdata } from "../redux/features/cardSlice";
+import { setUserdata } from "../redux/features/cardSlice";
 
 const SignUpForm = () => {
     const dispatch = useDispatch();
@@ -26,7 +26,7 @@ const SignUpForm = () => {
             if (response.ok) {
                 const responseData = await response.json();
                 // console.log(responseData);
-                dispatch(setuserdata(responseData));
+                dispatch(setUserdata(responseData));
                 console.log("Registration successful");
             } else {
                 console.error("Registration failed");
@@ -47,26 +47,26 @@ const SignUpForm = () => {
                                 <div className="flex flex-col">
                                     <label htmlFor="name" className=" w-full rounded ">Name
                                     </label>
-                                    <input type="text" value={name} id="name" onChange={(e) => { setName(e.target.value) }} placeholder="full name" required className="block border border-gray-300 w-full p-3 rounded mb-4" />
+                                    <input type="text" value={name} id="name" onChange={(e) => { setName(e.target.value) }} placeholder="full name" required className="block border border-gray-300 w-full p-3 rounded mb-4 hover:shadow-md hover:border-gray-400" />
                                 </div>
                                 <div className="flex flex-col">
                                     <label htmlFor="email" className="w-full rounded">Email
                                     </label>
-                                    <input type="text" value={email} id="email" onChange={(e) => { setEmail(e.target.value) }} placeholder="email" required className="block border border-gray-300 w-full p-3 rounded mb-4" />
+                                    <input type="text" value={email} id="email" onChange={(e) => { setEmail(e.target.value) }} placeholder="email" required className="block border border-gray-300 w-full p-3 rounded mb-4 hover:shadow-md hover:border-gray-400" />
                                 </div>
                                 <div className="flex flex-col">
                                     <label htmlFor="password" className="w-full rounded">Password
                                     </label>
-                                    <input type="password" value={password} id="password" onChange={(e) => { setPassword(e.target.value) }} placeholder="password" required className="block border border-gray-300 w-full p-3 rounded mb-4" />
+                                    <input type="password" value={password} id="password" onChange={(e) => { setPassword(e.target.value) }} placeholder="password" required className="block border border-gray-300 w-full p-3 rounded mb-4 hover:shadow-md hover:border-gray-400" />
                                 </div>
                                 <div className="flex flex-col">
                                     <label htmlFor="collegeId" className="w-full rounded">College ID
                                     </label>
-                                    <input type="text" value={collegeId} id="collegeId" onChange={(e) => { setCollegeID(e.target.value) }} placeholder="college ID" required className="block border border-gray-300 w-full p-3 rounded mb-4" />
+                                    <input type="text" value={collegeId} id="collegeId" onChange={(e) => { setCollegeID(e.target.value) }} placeholder="college ID (Ex. 2021CTAE0000)" required className="block border border-gray-300 w-full p-3 rounded mb-4 hover:shadow-md hover:border-gray-400" />
                                 </div>
                                 <div className="flex flex-col">
                                     <label htmlFor="phoneNo" className="w-full rounded">Mobile No.
-                                        <input type="number" value={phoneNo} id="phoneNO" onChange={(e) => { setPhoneNo(e.target.value) }} placeholder="Mobile No." required  className="block border border-gray-300 w-full p-3 rounded mb-4" />
+                                        <input type="number" value={phoneNo} id="phoneNO" onChange={(e) => { setPhoneNo(e.target.value) }} placeholder="Mobile No." required className="block border border-gray-300 w-full p-3 rounded mb-4 hover:shadow-md hover:border-gray-400" />
                                     </label>
                                 </div>
                                 <button type="submit" className="w-full py-3 px-4 bg-gray-800 hover:bg-gray-700 hover:shadow-xl text-white font-bold rounded-lg text-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800">Create Account</button>

@@ -50,7 +50,7 @@ const Navbar = () => {
             <div className="relative shadow-2xl">
                 <div className="flex h-14 items-center bg-transparent rounded-xl shadow-xl outline outline-offset-0 outline-[#404144]/10 " >
                     <div>
-                        <li className="ml-8 mr-auto list-none text-2xl text-white font-semibold letter-spacing px-4 py-1.5 backdrop-blur-lg rounded-lg"><Link to="/">
+                        <li className="ml-8 mr-auto list-none text-2xl text-white font-semibold letter-spacing py-1.5 backdrop-blur-lg rounded-lg"><Link to="/">
                             <img src={logo} alt="SELLOX" className='w-full h-7 object-cover' />
                         </Link></li>
                     </div>

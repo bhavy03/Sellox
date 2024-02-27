@@ -3,6 +3,13 @@ import express from "express";
 import { login, register, logout } from "../controllers/authDetail.js";
 import newCard from "../controllers/newCard.js";
 import upload from "../features/images.js";
+import {v2 as cloudinary} from 'cloudinary';
+          
+cloudinary.config({ 
+  cloud_name: 'dg8bx1w79', 
+  api_key: '383555616487936', 
+  api_secret: 'dgHtMKj9KQlskbsymTzxk0FIJJY' 
+});
 
 router.post("/register", register);
 

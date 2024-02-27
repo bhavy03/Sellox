@@ -2,6 +2,7 @@ import mongoose from "mongoose";
 
 const cardSchema = new mongoose.Schema({
   imageName: String,
+  imageUrl:String,
   productName: String,
   price: Number,
   phoneNo: Number,

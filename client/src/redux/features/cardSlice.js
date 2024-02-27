@@ -27,7 +27,7 @@ const cardSlice = createSlice({
     setAuthenticated: (state, action) => {
       state.isAuthenticated = action.payload;
     },
-    setuserdata: (state, action) => {
+    setUserdata: (state, action) => {
       state.userdata = action.payload;
       // console.log(state.userdata);
       // console.log(state.userdata.user);
@@ -40,7 +40,7 @@ export const {
   setCurrentCard,
   setSearch,
   setAuthenticated,
-  setuserdata,
+  setUserdata,
 } = cardSlice.actions;
 
 export default cardSlice.reducer;

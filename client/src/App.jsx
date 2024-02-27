@@ -25,7 +25,7 @@ const App = () => {
                 <SearchBar />
               </search>
             </div>
-            <main className=" min-h-screen h-full flex w-[100%] px-6 bg-gradient-to-b from-[#bdc3c7] to-[#2c3e50] rounded-sm relative m-auto border-b-2 border-b-gray-600">
+            <main className=" min-h-screen h-full flex w-[100%] bg-gradient-to-b from-[#bdc3c7] to-[#2c3e50] rounded-sm relative m-auto ">
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/user/login" element={<Login />} />
@@ -39,6 +39,7 @@ const App = () => {
               </Routes>
             </main>
             {/* <div className='w-full bg-[#2c3e50]'> */}
+            <div className='w-full bg-[#2c3e50]'></div>
             {/* <hr className='w-[70%] mx-auto' /> */}
             {/* </div> */}
             <footer className="w-full min-h-10 h-auto rounded-sm bg-gradient-to-b from-[#2c3e50] via-[#1b2530] to-[#000305] text-white shadow-md">

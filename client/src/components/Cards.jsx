@@ -2,32 +2,36 @@
 import { Link } from "react-router-dom"
 import { useDispatch } from "react-redux"
 import { setCurrentCard } from "../redux/features/cardSlice";
+import { LiaRupeeSignSolid } from "react-icons/lia";
 
 const Cards = ({ card }) => {
     const dispatch = useDispatch();
     const handleClick = () => {
         dispatch(setCurrentCard(card))
     }
-    const image = card.imageName;
+    const image = card.imageUrl;
     // console.log(image)
     // const normalizedImagePath = card.imagePath.replace(/\\/g, '/');
     // console.log(normalizedImagePath)
     return (
         <>
-            <div onClick={handleClick}>
-                <Link to={`/card/${card._id}`}>
-                    <div className="rounded-md bg-slate-100 shadow-md">
-                        <div className="w-60 h-60 flex flex-col p-2">
-                            <div className="h-2/3">
-                                <img src={`../images/${image}`} alt={card.productName} className="w-full h-full object-cover" />
-                            </div>
-                            <div>
-                                <p>{card.price}</p>
-                                <p>{card.productName}</p>
+            <div className="pl-3">
+                <div onClick={handleClick}>
+                    <Link to={`/card/${card._id}`}>
+                        <div className="rounded-xl my-3 mx-2 bg-white shadow-lg hover:shadow-2xl">
+                            <div className="w-60 h-60 flex flex-col p-2">
+                                <div className="h-2/3 overflow-hidden object-cover shadow-md rounded-lg">
+                                    <img src={image} alt={card.productName} className="w-full h-full object-cover" />
+                                </div>
+                                <div className=" flex flex-col h-1/3 justify-start pt-3">
+                                    <p className="flex text-2xl font-semibold align-top items-center">
+                                        <LiaRupeeSignSolid className="text-3xl flex items-center"/>{card.price}</p>
+                                    <p className="text-xl font-semibold ml-2">{card.productName}</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </Link>
+                    </Link>
+                </div>
             </div>
         </>
     )

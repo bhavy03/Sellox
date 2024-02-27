@@ -1,7 +1,7 @@
 import jwt from "jsonwebtoken";
 
 const sendCookie = (user, res, statusCode = 200) => {
-  console.log(user);
+  // console.log(user);
   const token = jwt.sign({ id: user._id }, "secured");
   // console.log(token);
   res

@@ -12,9 +12,9 @@ const SearchBar = () => {
     return (
         <div>
             <div className="flex m-1 p-3 shadow-xl">
-                <div className="flex bg-zinc-50 w-full md:flex md:flex-row md:w-4/5 px-1">
-                    <CiSearch className='my-2 h-6 w-4 ' />
-                    <input type="text" placeholder="search" className="px-3 w-full" onChange={searchChange} />
+                <div className="flex bg-zinc-50 w-full md:flex md:flex-row md:w-4/5 px-1 mr-2 rounded-md">
+                    <CiSearch className='my-2 h-6 w-9 ' />
+                    <input type="text" placeholder="Search" className="px-3 w-full focus:outline-none" onChange={searchChange} />
                 </div>
                 <div className=" hidden md:flex md:space-x-3 ml-auto">
                     <Link to="/user/sell" className='bg-[#283048] px-6 py-2 text-center text-lg rounded-full text-white font-semibold hover:bg-[#1b2530] hover:text-white hover:font-bold'>Sell</Link><p></p>
