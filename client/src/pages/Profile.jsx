@@ -17,8 +17,8 @@ const Profile = () => {
                                     <p className="font-semibold text-xl mb-4 text-center mt-5">Your personal details :</p>
                                     <hr className="mx-5" />
                                     <p className="md:text-gray-700 text-gray-800 mb-2 mt-3 md:text-2xl text-lg">Email : {userdata.user.email}</p>
-                                    <p className="md:text-gray-700 text-gray-800 mb-2 mt-3 md:text-2xl text-lg">Enrollment No :{userdata.user.collegeId}</p>
-                                    <p className="md:text-gray-700 text-gray-800 mb-2 mt-3 md:text-2xl text-lg">Phone No :{userdata.user.phoneNo}</p>
+                                    <p className="md:text-gray-700 text-gray-800 mb-2 mt-3 md:text-2xl text-lg">Phone No : {userdata.user.phoneNo}</p>
+                                    <p className="md:text-gray-700 text-gray-800 mb-2 mt-3 md:text-2xl text-lg">Enrollment No : {userdata.user.collegeId}</p>
                                 </div>
                             </div>
                         </div>

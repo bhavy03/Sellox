@@ -79,7 +79,7 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
-            <div className={`absolute top-0 h-screen w-1/3 bg-gradient-to-t from-white to-[#17212a] backdrop-blur-xl z-10 p-6 md:hidden smooth-transition ${mobileMenuOpen ? 'left-0' : '-left-full'}`}>
+            <div className={`absolute top-0 h-screen w-1/3 bg-gradient-to-t from-white to-[#303030] backdrop-blur-xl z-10 p-6 md:hidden smooth-transition ${mobileMenuOpen ? 'left-0' : '-left-full'}`}>
                 <img src={logo} alt="logo" className="w-full h-14 object-contain" />
                 <NavLinks handleClick={() => setMobileMenuOpen(false)} />
             </div>

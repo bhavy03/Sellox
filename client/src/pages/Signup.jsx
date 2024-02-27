@@ -62,7 +62,7 @@ const SignUpForm = () => {
                                 <div className="flex flex-col">
                                     <label htmlFor="collegeId" className="w-full rounded">College ID
                                     </label>
-                                    <input type="text" value={collegeId} id="collegeId" onChange={(e) => { setCollegeID(e.target.value) }} placeholder="college ID (Ex. 2021CTAE0000)" required className="block border border-gray-300 w-full p-3 rounded mb-4 hover:shadow-md hover:border-gray-400" />
+                                    <input type="text" value={collegeId} id="collegeId" onChange={(e) => { setCollegeID(e.target.value) }} placeholder="College ID (Ex. 2021CTAE000)" required className="block border border-gray-300 w-full p-3 rounded mb-4 hover:shadow-md hover:border-gray-400" />
                                 </div>
                                 <div className="flex flex-col">
                                     <label htmlFor="phoneNo" className="w-full rounded">Mobile No.

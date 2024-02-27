@@ -11,13 +11,14 @@ import SearchBar from './components/SearchBar';
 import Signup from './pages/Signup';
 import CardDetail from './pages/CardDetail';
 // import Logout from './components/Logout';
+// #2c3e50
 const App = () => {
   return (
     <>
       <div>
         <div>
           <div className="flex flex-col scroll-smooth relative">
-            <div className=' bg-gradient-to-l from-[#616769]  to-[#2c3e50] bg-transparent relative stick shadow-md md:px-8 z-10 backdrop-blur-md'>
+            <div className=' bg-gradient-to-l from-[#616769]  to-[#000] bg-transparent relative stick shadow-md md:px-8 z-10 backdrop-blur-md'>
               <nav className="p-3 relative stick ">
                 <Navbar />
               </nav>
@@ -25,7 +26,7 @@ const App = () => {
                 <SearchBar />
               </search>
             </div>
-            <main className=" min-h-screen h-full flex w-[100%] bg-gradient-to-b from-[#bdc3c7] to-[#2c3e50] rounded-sm relative m-auto ">
+            <main className=" min-h-screen h-full flex w-[100%] bg-gradient-to-b from-[#bdc3c7] to-[#212121] rounded-sm relative m-auto ">
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/user/login" element={<Login />} />
@@ -42,7 +43,7 @@ const App = () => {
             <div className='w-full bg-[#2c3e50]'></div>
             {/* <hr className='w-[70%] mx-auto' /> */}
             {/* </div> */}
-            <footer className="w-full min-h-10 h-auto rounded-sm bg-gradient-to-b from-[#2c3e50] via-[#1b2530] to-[#000305] text-white shadow-md">
+            <footer className="w-full min-h-10 h-auto rounded-sm bg-gradient-to-b from-[#212121] to-[#000] text-white shadow-md">
               <Footer />
             </footer>
           </div>

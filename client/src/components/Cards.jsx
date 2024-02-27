@@ -15,7 +15,7 @@ const Cards = ({ card }) => {
     // console.log(normalizedImagePath)
     return (
         <>
-            <div className="pl-3">
+            <div className="md:pl-5 pl-3">
                 <div onClick={handleClick}>
                     <Link to={`/card/${card._id}`}>
                         <div className="rounded-xl my-3 mx-2 bg-white shadow-lg hover:shadow-2xl">
