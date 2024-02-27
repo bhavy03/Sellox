@@ -18,7 +18,7 @@ export const login = async (req, res) => {
     if (!isMatch) {
       return res.status(404).json({
         sucess: false,
-        message: "invalid email or password",
+        message: "Invalid email or password",
       });
     }
     sendCookie(user, res, 200);
@@ -61,5 +61,5 @@ export const logout = async (req, res) => {
       // sameSite: process.env.NODE_ENV === 'devleopment' ? 'lax' : 'none',
       // secure: process.env.NODE_ENV === 'devleopment' ? false : true
     })
-    .redirect("/");
+    .json("logged out");
 };

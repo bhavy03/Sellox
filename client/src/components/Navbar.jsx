@@ -15,6 +15,7 @@ import { RiLoginBoxFill } from "react-icons/ri";
 import logo from "../assets/logo3.svg"
 import '../index.css'
 import { useSelector } from "react-redux"
+import Logout from './Logout';
 
 const links = [
     { name: 'Home', to: '/', icon: GoHomeFill },
@@ -70,7 +71,7 @@ const Navbar = () => {
                             )}
                         </div>
                         {
-                            isAuthenticated ? "" :
+                            isAuthenticated ? <Logout /> :
                                 <div className='md:flex hidden'>
                                     <li className='bg-zinc-50 text-black text-sm font-semibold hover:text-white hover:bg-[#1b2530] hover:font-bold px-2 py-1 rounded-md'><Link to="/user/login">LOGIN</Link></li>
                                 </div>

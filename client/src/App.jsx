@@ -10,6 +10,7 @@ import Rent from './pages/Rent';
 import SearchBar from './components/SearchBar';
 import Signup from './pages/Signup';
 import CardDetail from './pages/CardDetail';
+// import Logout from './components/Logout';
 const App = () => {
   return (
     <>
@@ -24,10 +25,11 @@ const App = () => {
                 <SearchBar />
               </search>
             </div>
-            <main className=" min-h-screen h-full flex w-[100%] px-6 bg-gradient-to-b from-[#bdc3c7] to-[#2c3e50] rounded-sm relative m-auto">
+            <main className=" min-h-screen h-full flex w-[100%] px-6 bg-gradient-to-b from-[#bdc3c7] to-[#2c3e50] rounded-sm relative m-auto border-b-2 border-b-gray-600">
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/user/login" element={<Login />} />
+                <Route path="/user/logout" element={<Home />} />
                 <Route path="/user/register" element={<Signup />} />
                 <Route path="/chat" element={<Chat />} />
                 <Route path="/profile" element={<Profile />} />
@@ -36,9 +38,9 @@ const App = () => {
                 <Route path="/card/:cardId" element={<CardDetail />} />
               </Routes>
             </main>
-            <div className='w-full bg-[#2c3e50]'>
-              <hr className='w-[70%] mx-auto' />
-            </div>
+            {/* <div className='w-full bg-[#2c3e50]'> */}
+            {/* <hr className='w-[70%] mx-auto' /> */}
+            {/* </div> */}
             <footer className="w-full min-h-10 h-auto rounded-sm bg-gradient-to-b from-[#2c3e50] via-[#1b2530] to-[#000305] text-white shadow-md">
               <Footer />
             </footer>

@@ -23,7 +23,7 @@ const Cards = ({ card }) => {
                             </div>
                             <div>
                                 <p>{card.price}</p>
-                                <p>{card.details}</p>
+                                <p>{card.productName}</p>
                             </div>
                         </div>
                     </div>

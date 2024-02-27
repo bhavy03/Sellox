@@ -8,6 +8,7 @@ const Login = () => {
     const dispatch = useDispatch();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [errorData, setErrorData] = useState("");
     const navigate = useNavigate();
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -26,10 +27,13 @@ const Login = () => {
                 // console.log(responseData);
                 dispatch(setuserdata(responseData));
                 console.log("Login successful");
+                navigate("/");
             } else {
-                console.error("Login failed");
+                const erroredData = await response.json();
+                setErrorData(erroredData.message);
+                // console.log(errorData);
+                // console.error("Login failed");
             }
-            navigate("/");
         } catch (error) {
             console.error("Error logging in:", error);
         }
@@ -62,6 +66,11 @@ const Login = () => {
                                 </div>
                                 <div>
                                     <input type="password" value={password} id="password" onChange={(e) => { setPassword(e.target.value) }} placeholder="password" autoComplete="current-password" required className="block w-full p-2 mb-4 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-gray-800 focus:border-[#B4B4B8] hover:shadow-md " />
+                                </div>
+                            </div>
+                            <div>
+                                <div>
+                                    {errorData}
                                 </div>
                             </div>
                             <div className="flex space-x-5 px-1 text-xl">
