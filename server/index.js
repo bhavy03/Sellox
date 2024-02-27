@@ -7,9 +7,7 @@ import cookieParser from "cookie-parser";
 import isAuthenticated from "./middlewares/authenticated.js";
 
 mongoose
-  .connect("mongodb://127.0.0.1:27017/", {
-    dbName: "sellox",
-  })
+  .connect("mongodb+srv://bhavya0360:ku2vycg2Ruz6k4mo@cluster0.ywvevuv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
   .then(() => {
     console.log("connected to mongodb");
   })
