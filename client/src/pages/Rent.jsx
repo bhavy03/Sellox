@@ -12,7 +12,7 @@ const Rent = () => {
     const formData = new FormData(event.target);
 
     try {
-      const response = await fetch('https://sellox.vercel.app/user/rent', {
+      const response = await fetch('http://localhost:3000/user/rent', {
         method: 'POST',
         body: formData
       });
