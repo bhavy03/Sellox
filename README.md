@@ -103,8 +103,14 @@ console for more information.
 
    If you don't get an error, you are ready 
 to start development.
+ 
+3. Change config.env.example
 
-3. Run the app
+   Change the filename from config.env.example to
+config.env and assign all variable according to you
+
+
+4. Run the app
 
    ```shell
    npm run dev
