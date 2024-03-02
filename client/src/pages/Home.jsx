@@ -14,7 +14,11 @@ const Home = () => {
     useEffect(() => {
         async function fetchData() {
             try {
-                const response = await fetch(`${import.meta.env.VITE_SERVER}card/all`);
+                const response = await fetch(`${import.meta.env.VITE_SERVER}card/all`, {
+                    headers: {
+                        'Access-Control-Allow-Origin': '*',
+                    }
+                });
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
