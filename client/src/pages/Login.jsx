@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux"
 import { setUserdata } from "../redux/features/cardSlice";
 import { Link } from "react-router-dom";
 // import Signup from "./Signup";
+
 const Login = () => {
     const dispatch = useDispatch();
     const [email, setEmail] = useState("");
@@ -13,7 +14,7 @@ const Login = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            const response = await fetch("http://localhost:3000/user/login", {
+            const response = await fetch(`${import.meta.env.VITE_SERVER}user/login`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

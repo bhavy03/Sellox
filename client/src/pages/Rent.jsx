@@ -12,7 +12,7 @@ const Rent = () => {
     const formData = new FormData(event.target);
 
     try {
-      const response = await fetch('http://localhost:3000/user/rent', {
+      const response = await fetch(`${import.meta.env.VITE_SERVER}user/rent`, {
         method: 'POST',
         body: formData
       });

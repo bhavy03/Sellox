@@ -14,7 +14,7 @@ const Sell = () => {
     const formData = new FormData(event.target);
 
     try {
-      const response = await fetch('http://localhost:3000/user/sell', {
+      const response = await fetch(`${import.meta.env.VITE_SERVER}user/sell`, {
         method: 'POST',
         body: formData
       });

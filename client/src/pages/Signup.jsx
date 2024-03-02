@@ -15,7 +15,7 @@ const SignUpForm = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            const response = await fetch("http://localhost:3000/user/register", {
+            const response = await fetch(`${import.meta.env.VITE_SERVER}user/register`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
