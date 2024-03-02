@@ -13,11 +13,9 @@ config({
 const app = express();
 
 const corsOptions = {
-  origin: [`${process.env.FRONTEND_URI}`],
+  origin: `${process.env.FRONTEND_URI}`,
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true,
-  allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With"],
-  exposedHeaders: ["X-Total-Count"],
 };
 app.use(cors(corsOptions));
 // console.log()
