@@ -18,7 +18,6 @@ const corsOptions = {
   credentials: true,
 };
 app.use(cors(corsOptions));
-// console.log()
 
 mongoose
   .connect(process.env.MONGO_URI, {

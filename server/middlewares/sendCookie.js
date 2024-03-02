@@ -3,9 +3,6 @@ import jwt from "jsonwebtoken";
 const sendCookie = (user, res, statusCode = 200) => {
   // console.log(user);
   const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET);
-  // console.log(token);
-  // console.log(process.env.NODE_ENV);
-  // console.log(process.env.NODE_ENV === "Development");
   res
     .status(statusCode)
     .cookie("token", token, {
