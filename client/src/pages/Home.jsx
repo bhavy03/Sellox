@@ -15,7 +15,7 @@ const Home = () => {
         async function fetchData() {
             try {
                 const response = await fetch(`${import.meta.env.VITE_SERVER}card/all`,{
-                    mode:"cors",
+                    mode:"no-cors",
                 });
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
