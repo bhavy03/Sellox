@@ -10,9 +10,18 @@ config({
   path: "./features/config.env",
 });
 
+const app = express();
+
+const corsOptions = {
+  origin: `${process.env.FRONTEND_URI}`,
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true,
+};
+app.use(cors(corsOptions));
+
 mongoose
-  .connect(process.env.MONGO_URI,{
-    dbName:process.env.DB_NAME,
+  .connect(process.env.MONGO_URI, {
+    dbName: process.env.DB_NAME,
   })
   .then((c) => {
     console.log(`connected to ${c.connection.host}`);
@@ -21,20 +30,10 @@ mongoose
     console.log(err);
   });
 
-const app = express();
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.use(cookieParser());
-const corsOptions = {
-  origin: `${process.env.FRONTEND_URI}`,
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true,
-};
-
-app.use(cors(corsOptions));
-
 app.use("/user", userRouter);
 app.use("/card", cardRouter);
 
@@ -47,4 +46,3 @@ app.listen(process.env.PORT, () => {
     `server is working on port: ${process.env.PORT} in ${process.env.Node_ENV} mode`
   );
 });
-// set NODE_ENV=Development&&
