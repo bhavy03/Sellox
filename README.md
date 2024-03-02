@@ -74,7 +74,10 @@ To set up a development environment, please follow these steps:
 
    If you don't get an error, you are ready to start development.
 
-3. Run the app
+3. Rename .env.example to .env
+    
+
+4. Run the app
 
    ```shell
    npm run dev
