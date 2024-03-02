@@ -10,6 +10,7 @@ const Cards = ({ card }) => {
         dispatch(setCurrentCard(card))
     }
     const image = card.imageUrl;
+    // console.log(card.duration)
     // console.log(image)
     // const normalizedImagePath = card.imagePath.replace(/\\/g, '/');
     // console.log(normalizedImagePath)
@@ -22,10 +23,11 @@ const Cards = ({ card }) => {
                             <div className="w-60 h-60 flex flex-col p-2">
                                 <div className="h-2/3 overflow-hidden object-cover shadow-md rounded-lg">
                                     <img src={image} alt={card.productName} className="w-full h-full object-cover" />
+                                    <div>{card.duration}</div>
                                 </div>
                                 <div className=" flex flex-col h-1/3 justify-start pt-3">
                                     <p className="flex text-2xl font-semibold align-top items-center">
-                                        <LiaRupeeSignSolid className="text-3xl flex items-center"/>{card.price}</p>
+                                        <LiaRupeeSignSolid className="text-3xl flex items-center" />{card.price}</p>
                                     <p className="text-xl font-semibold ml-2">{card.productName}</p>
                                 </div>
                             </div>

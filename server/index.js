@@ -1,15 +1,21 @@
 import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
+import { config } from "dotenv";
 import userRouter from "./routes/userRouter.js";
 import cardRouter from "./routes/cardRouter.js";
 import cookieParser from "cookie-parser";
-import isAuthenticated from "./middlewares/authenticated.js";
+
+config({
+  path: "./features/config.env",
+});
 
 mongoose
-  .connect("mongodb+srv://bhavya0360:ku2vycg2Ruz6k4mo@cluster0.ywvevuv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
-  .then(() => {
-    console.log("connected to mongodb");
+  .connect(process.env.MONGO_URI,{
+    dbName:process.env.DB_NAME,
+  })
+  .then((c) => {
+    console.log(`connected to ${c.connection.host}`);
   })
   .catch((err) => {
     console.log(err);
@@ -22,7 +28,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.use(cookieParser());
 const corsOptions = {
-  origin: "http://localhost:5173",
+  origin: `${process.env.FRONTEND_URI}`,
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true,
 };
@@ -35,6 +41,9 @@ app.get("/", async (req, res) => {
   res.send("SERVER");
 });
 
-app.listen(3000, () => {
-  console.log("server is on");
+app.listen(process.env.PORT, () => {
+  console.log(
+    `server is working on port: ${process.env.PORT} in ${process.env.Node_ENV} mode`
+  );
 });
+// set NODE_ENV=Development&&

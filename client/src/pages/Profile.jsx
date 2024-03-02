@@ -9,7 +9,7 @@ const Profile = () => {
             {
                 isAuthenticated ?
                     <div className="w-full">
-                        <div className="bg-yellow-100 w-full h-full flex justify-center items-start"
+                        <div className="bg-white w-full h-full flex justify-center items-start"
                             style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1495195129352-aeb325a55b65?q=80&w=1776&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)', backgroundSize: 'cover' }}>
                             <div className="bg-gray-100  px-14 md:p-6 mt-20 rounded-lg shadow-xl h-screen md:w-full bg-transparent">
                                 <h2 className="text-3xl md:text-6xl font-bold mb-10 md:ml-8">{userdata.user.name.toUpperCase()}</h2>

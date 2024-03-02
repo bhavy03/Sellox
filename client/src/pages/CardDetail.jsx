@@ -18,7 +18,7 @@ const CardDetail = () => {
                     <div className="w-full md:grid md:grid-cols-5 md:grid-rows-7 md:gap-3 px-4 flex flex-col h-full">
                         <div className="col-start-1 col-end-4 row-start-1 row-span-5 bg-white rounded-lg shadow-lg p-3 border border-[#dadada]">
                             <img src={cardImage} alt=
-                                {currentId.productName} className="w-full h-full object-cover overflow-hidden rounded-md" />
+                                {currentId.productName} className="w-auto h-full object-center overflow-hidden rounded-md mx-auto" />
                         </div>
                         <div className="col-start-4 col-end-6 row-start-1 row-span-2 rounded-lg shadow-lg p-3 border border-[#dadada] md:h-full h-1/4">
                             <div className="h-full flex flex-col">
@@ -26,6 +26,9 @@ const CardDetail = () => {
                                     <LiaRupeeSignSolid className="md:text-5xl text-3xl flex justify-center" />
                                     <p className="justify-self-center">{currentId.price}</p>
                                 </p>
+                                <div className="text-2xl ml-4 font font-semibold flex">{currentId.duration}
+                                    {/* <div className="text-lg my-auto ml-7 text-green-700">Rent</div> */}
+                                </div>
                                 <p className="px-3 text-2xl font-semibold mt-5 text-gray-600 ">{currentId.productName}</p>
                             </div>
                         </div>
