@@ -6,11 +6,11 @@ import userRouter from "./routes/userRouter.js";
 import cardRouter from "./routes/cardRouter.js";
 import cookieParser from "cookie-parser";
 
+const app = express();
+
 config({
   path: "./features/config.env",
 });
-
-const app = express();
 
 const corsOptions = {
   origin: `${process.env.FRONTEND_URI}`,
