@@ -11,10 +11,10 @@ const Home = () => {
         if (userdata.token) {
             const cookieValue = userdata.token;
             localStorage.setItem('myCookie', cookieValue);
-            console.log(localStorage.getItem('myCookie'));
+            // console.log(localStorage.getItem('myCookie'));
         } else {
             // console.log('Cookie not found or received');
-            localStorage.removeItem('myCookie');
+            // localStorage.removeItem('myCookie');
         }
         const cookieValue = localStorage.getItem('myCookie');
         if (cookieValue) {
@@ -26,6 +26,10 @@ const Home = () => {
         }
     }
     // console.log(hasCookieInLocalStorage())
+    if (hasCookieInLocalStorage()) {
+        dispatch(setAuthenticated(true))
+    }
+
     useEffect(() => {
         async function fetchData() {
             try {
@@ -40,10 +44,8 @@ const Home = () => {
             }
         }
         fetchData();
-        if (hasCookieInLocalStorage()) {
-            dispatch(setAuthenticated(true))
-        }
     }, [dispatch]);
+
 
     // console.log(currentCards)
     const filteredCards = currentCards.filter((cards) => {
