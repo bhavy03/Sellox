@@ -8,7 +8,7 @@ const Logout = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            const response = await fetch("http://localhost:3000/user/logout", {
+            const response = await fetch("/api/user/logout", {
                 credentials: "include"
             });
             navigate("/");

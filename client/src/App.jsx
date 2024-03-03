@@ -29,13 +29,13 @@ const App = () => {
             <main className=" min-h-screen h-full flex w-[100%] bg-gradient-to-b from-[#bdc3c7] to-[#212121] rounded-sm relative m-auto ">
               <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/user/login" element={<Login />} />
-                <Route path="/user/logout" element={<Home />} />
-                <Route path="/user/register" element={<Signup />} />
-                <Route path="/chat" element={<Chat />} />
-                <Route path="/profile" element={<Profile />} />
-                <Route path="/user/sell" element={<Sell />} />
-                <Route path="/user/rent" element={<Rent />} />
+                <Route path="/api/user/login" element={<Login />} />
+                <Route path="/api/user/logout" element={<Home />} />
+                <Route path="/api/user/register" element={<Signup />} />
+                <Route path="/api/chat" element={<Chat />} />
+                <Route path="/api/profile" element={<Profile />} />
+                <Route path="/api/user/sell" element={<Sell />} />
+                <Route path="/api/user/rent" element={<Rent />} />
                 <Route path="/card/:cardId" element={<CardDetail />} />
               </Routes>
             </main>

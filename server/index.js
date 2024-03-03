@@ -34,8 +34,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.use(cookieParser());
-app.use("/user", userRouter);
-app.use("/card", cardRouter);
+app.use("/api/user", userRouter);
+app.use("/api/card", cardRouter);
 
 app.get("/", async (req, res) => {
   res.send("SERVER");

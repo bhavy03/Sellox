@@ -17,8 +17,8 @@ const SearchBar = () => {
                     <input type="text" placeholder="Search" className="px-3 w-full focus:outline-none" onChange={searchChange} />
                 </div>
                 <div className=" hidden md:flex md:space-x-3 ml-auto">
-                    <Link to="/user/sell" className='bg-[#000] px-6 py-2 text-center text-lg rounded-full text-white font-semibold hover:bg-[#212121] hover:text-white hover:font-bold'>Sell</Link><p></p>
-                    <Link to="/user/rent" className='bg-[#000] px-6 py-2 text-center rounded-full text-lg text-white font-semibold hover:bg-[#212121] hover:font-bold hover:text-white'>Rent</Link><p></p>
+                    <Link to="/api/user/sell" className='bg-[#000] px-6 py-2 text-center text-lg rounded-full text-white font-semibold hover:bg-[#212121] hover:text-white hover:font-bold'>Sell</Link><p></p>
+                    <Link to="/api/user/rent" className='bg-[#000] px-6 py-2 text-center rounded-full text-lg text-white font-semibold hover:bg-[#212121] hover:font-bold hover:text-white'>Rent</Link><p></p>
                 </div>
             </div>
         </div>
