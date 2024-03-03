@@ -1,8 +1,11 @@
 import { Link, useNavigate } from "react-router-dom"
-import { useSelector } from "react-redux"
+import { useSelector, useDispatch } from "react-redux"
 import Login from "../pages/Login";
+import { setAuthenticated } from '../redux/features/cardSlice';
+
 
 const Logout = () => {
+    const dispatch = useDispatch();
     const navigate = useNavigate();
     const { isAuthenticated } = useSelector((state) => state.card);
     const handleSubmit = async (event) => {
@@ -15,6 +18,8 @@ const Logout = () => {
             if (response.ok) {
                 const responseData = await response.json()
                 console.log(responseData);
+                localStorage.removeItem('myCookie');
+                dispatch(setAuthenticated(false));
             } else {
                 console.error("Logging out failed");
             }

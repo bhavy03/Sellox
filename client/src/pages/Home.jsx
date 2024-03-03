@@ -6,11 +6,26 @@ import { setAuthenticated } from '../redux/features/cardSlice';
 
 const Home = () => {
     const dispatch = useDispatch();
-    function hasToken() {
+    function hasCookieInLocalStorage() {
         const token = document.cookie.split("; ").find(row => row.startsWith("token="));
-        return token !== undefined;
+        if (token) {
+            const cookieValue = token.split('=')[1];
+            localStorage.setItem('myCookie', cookieValue);
+            // console.log(localStorage.getItem('myCookie'));
+        } else {
+            // console.log('Cookie not found or received');
+            localStorage.removeItem('myCookie');
+        }
+        const cookieValue = localStorage.getItem('myCookie');
+        if (cookieValue) {
+            // console.log(cookieValue);
+            return true;
+        } else {
+            // console.log('Cookie not in localStorage');
+            return false;
+        }
     }
-    // console.log(hasToken())
+    // console.log(hasCookieInLocalStorage())
     useEffect(() => {
         async function fetchData() {
             try {
@@ -25,7 +40,7 @@ const Home = () => {
             }
         }
         fetchData();
-        if (hasToken()) {
+        if (hasCookieInLocalStorage()) {
             dispatch(setAuthenticated(true))
         }
     }, [dispatch]);
