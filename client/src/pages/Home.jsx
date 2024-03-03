@@ -6,10 +6,10 @@ import { setAuthenticated } from '../redux/features/cardSlice';
 
 const Home = () => {
     const dispatch = useDispatch();
+    const { currentCards, searchField, userdata } = useSelector((state) => state.card);
     function hasCookieInLocalStorage() {
-        const token = document.cookie.split("; ").find(row => row.startsWith("token="));
-        if (token) {
-            const cookieValue = token.split('=')[1];
+        if (userdata.token) {
+            const cookieValue = userdata.token;
             localStorage.setItem('myCookie', cookieValue);
             // console.log(localStorage.getItem('myCookie'));
         } else {
@@ -45,7 +45,6 @@ const Home = () => {
         }
     }, [dispatch]);
 
-    const { currentCards, searchField } = useSelector((state) => state.card);
     // console.log(currentCards)
     const filteredCards = currentCards.filter((cards) => {
         return cards.productName.toLowerCase().includes(searchField.toLowerCase());

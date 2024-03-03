@@ -27,7 +27,7 @@ const Login = () => {
 
             if (response.ok) {
                 const responseData = await response.json();
-                // console.log(responseData);
+                console.log(responseData);
                 dispatch(setUserdata(responseData));
                 console.log("Login successful");
                 navigate("/");
