@@ -19,10 +19,10 @@ import Logout from './Logout';
 
 const links = [
     { name: 'Home', to: '/', icon: GoHomeFill },
-    { name: 'Chat', to: '/api/chat', icon: MdChatBubble },
-    { name: 'Sell', to: '/api/user/sell', icon: MdSell },
-    { name: 'Rent', to: '/api/user/rent', icon: IoMdCart },
-    { name: 'Login', to: '/api/user/login', icon: RiLoginBoxFill },
+    { name: 'Chat', to: '/chat', icon: MdChatBubble },
+    { name: 'Sell', to: '/user/sell', icon: MdSell },
+    { name: 'Rent', to: '/user/rent', icon: IoMdCart },
+    { name: 'Login', to: '/user/login', icon: RiLoginBoxFill },
 ];
 
 // eslint-disable-next-line react/prop-types
@@ -57,10 +57,10 @@ const Navbar = () => {
                     <div className="md:flex md:ml-auto md:mr-5 md:space-x-10 flex flex-row ml-auto space-x-5 mr-3 list-none items-center">
                         <div className='hidden md:space-x-10 md:flex'>
                             <li ><Link to="/"><MdHomeFilled className='w-6 h-6 hover:shadow-lg' style={{ color: 'white' }} /></Link></li>
-                            <li><Link to="/api/chat"><MdOutlineChatBubble className='w-6 h-6' style={{ color: 'white' }} /></Link></li>
+                            <li><Link to="chat"><MdOutlineChatBubble className='w-6 h-6' style={{ color: 'white' }} /></Link></li>
                         </div>
 
-                        <li><Link to="/api/profile"><FaCircleUser className='w-5 h-6 md:static absolute top-4 right-16' style={{ color: 'white' }} /></Link></li>
+                        <li><Link to="/profile"><FaCircleUser className='w-5 h-6 md:static absolute top-4 right-16' style={{ color: 'white' }} /></Link></li>
 
                         {/* Mobile sidebar */}
                         <div className="absolute md:hidden top-4 right-3">

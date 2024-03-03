@@ -14,7 +14,7 @@ const Login = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            const response = await fetch(`/api/user/login`, {
+            const response = await fetch(`${import.meta.env.VITE_SERVER}user/login`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
