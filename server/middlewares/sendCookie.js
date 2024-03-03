@@ -6,7 +6,7 @@ const sendCookie = (user, res, statusCode = 200) => {
   res
     .status(statusCode)
     .cookie("token", token, {
-      httponly: true,
+      httponly: false,
       maxAge: 7 * 24 * 60 * 60 * 1000,
       sameSite: "none",
       secure: true,
