@@ -12,6 +12,7 @@ import Signup from './pages/Signup';
 import CardDetail from './pages/CardDetail';
 // import Logout from './components/Logout';
 // #2c3e50
+
 const App = () => {
   return (
     <>
@@ -39,10 +40,7 @@ const App = () => {
                 <Route path="/card/:cardId" element={<CardDetail />} />
               </Routes>
             </main>
-            {/* <div className='w-full bg-[#2c3e50]'> */}
             <div className='w-full bg-[#2c3e50]'></div>
-            {/* <hr className='w-[70%] mx-auto' /> */}
-            {/* </div> */}
             <footer className="w-full min-h-10 h-auto rounded-sm bg-gradient-to-b from-[#212121] to-[#000] text-white shadow-md">
               <Footer />
             </footer>

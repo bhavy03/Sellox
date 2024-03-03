@@ -11,9 +11,7 @@ const Home = () => {
         if (userdata.token) {
             const cookieValue = userdata.token;
             localStorage.setItem('myCookie', cookieValue);
-            // console.log(localStorage.getItem('myCookie'));
         } else {
-            // console.log('Cookie not found or received');
             // localStorage.removeItem('myCookie');
         }
         const cookieValue = localStorage.getItem('myCookie');
@@ -21,14 +19,13 @@ const Home = () => {
             // console.log(cookieValue);
             return true;
         } else {
-            // console.log('Cookie not in localStorage');
             return false;
         }
     }
-    // console.log(hasCookieInLocalStorage())
     if (hasCookieInLocalStorage()) {
         dispatch(setAuthenticated(true))
     }
+
 
     useEffect(() => {
         async function fetchData() {
@@ -47,7 +44,6 @@ const Home = () => {
     }, [dispatch]);
 
 
-    // console.log(currentCards)
     const filteredCards = currentCards.filter((cards) => {
         return cards.productName.toLowerCase().includes(searchField.toLowerCase());
     });
