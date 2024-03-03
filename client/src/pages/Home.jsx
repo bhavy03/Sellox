@@ -11,7 +11,7 @@ const Home = () => {
         if (userdata.token) {
             const cookieValue = userdata.token;
             localStorage.setItem('myCookie', cookieValue);
-            // console.log(localStorage.getItem('myCookie'));
+            console.log(localStorage.getItem('myCookie'));
         } else {
             // console.log('Cookie not found or received');
             localStorage.removeItem('myCookie');

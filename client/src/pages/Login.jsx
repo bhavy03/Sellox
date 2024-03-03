@@ -20,14 +20,13 @@ const Login = () => {
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify({ email, password }),
-                // include withcredentials
-                withCredentials: true,
-                credentials: "include"
+                // withCredentials: true,
+                // credentials: "include"
             });
 
             if (response.ok) {
                 const responseData = await response.json();
-                console.log(responseData);
+                // console.log(responseData);
                 dispatch(setUserdata(responseData));
                 console.log("Login successful");
                 navigate("/");
