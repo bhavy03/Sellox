@@ -8,7 +8,7 @@ dotenv.config();
 export default defineConfig({
   server: {
     proxy: {
-      "/api": "http://localhost:3000/",
+      "/api": "https://sellox.vercel.app/",
     },
   },
   plugins: [react()],
