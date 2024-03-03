@@ -20,12 +20,9 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 mongoose
-  .connect(
-    "mongodb+srv://bhavya0360:ku2vycg2Ruz6k4mo@cluster0.ywvevuv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
-    {
-      dbName: "test",
-    }
-  )
+  .connect(process.env.MONGO_URI, {
+    dbName: process.env.DB_NAME,
+  })
   .then((c) => {
     console.log(`connected to ${c.connection.host}`);
   })
