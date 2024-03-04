@@ -14,7 +14,6 @@ const Logout = () => {
             const response = await fetch(`${import.meta.env.VITE_SERVER}user/logout`, {
                 credentials: "include"
             });
-            navigate("/");
             if (response.ok) {
                 const responseData = await response.json()
                 console.log(responseData);
@@ -23,6 +22,7 @@ const Logout = () => {
             } else {
                 console.error("Logging out failed");
             }
+            navigate("/");
         } catch (error) {
             console.error("Error logging out:", error);
         }

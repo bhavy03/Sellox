@@ -22,10 +22,7 @@ const Home = () => {
             return false;
         }
     }
-    if (hasCookieInLocalStorage()) {
-        dispatch(setAuthenticated(true))
-    }
-
+    
 
     useEffect(() => {
         async function fetchData() {
@@ -41,6 +38,9 @@ const Home = () => {
             }
         }
         fetchData();
+        if (hasCookieInLocalStorage()) {
+            dispatch(setAuthenticated(true))
+        }
     }, [dispatch]);
 
 
