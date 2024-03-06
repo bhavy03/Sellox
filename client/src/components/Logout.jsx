@@ -32,7 +32,7 @@ const Logout = () => {
             isAuthenticated ?
                 <div onClick={handleSubmit}>
                     <div className='md:flex hidden'>
-                        <li className='bg-zinc-50 text-black text-sm font-semibold hover:text-white hover:bg-[#1b2530] hover:font-bold px-2 py-1 rounded-md'><Link to="/user/logout">LOGOUT</Link></li>
+                        <li className='bg-zinc-50 text-black text-sm font-semibold hover:text-white hover:bg-[#38caff] hover:font-bold px-2 py-1 rounded-md'><Link to="/user/logout">LOGOUT</Link></li>
                     </div>
                 </div>
                 : <Login />

@@ -80,7 +80,7 @@ const Login = () => {
                                     <Link to="/user/register" className="font-semibold hover:text-gray-800 text-gray-950 text-md underline">SignUp</Link>
                                 </div>
                                 <div className="hover:bg-gray-700">
-                                    <button type="submit" className="flex w-full justify-center rounded-md bg-gray-800 px-3 py-3 text-xl  font-semibold leading-6 text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2  ">Login</button>
+                                    <button type="submit" className="flex w-full justify-center rounded-md bg-[#0ea5e9] px-3 py-3 text-xl  font-semibold leading-6 text-white shadow-sm hover:bg-[#38caff] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2  ">Login</button>
                                 </div>
                                 {/* <button type="button" onClick={() => navigate("/user/register")}>Signup</button> */}
                             </form>

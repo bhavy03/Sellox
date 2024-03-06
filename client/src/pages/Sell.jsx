@@ -42,7 +42,7 @@ const Sell = () => {
               <input type="text" name="productName" id="productName" required className="block w-full p-2 mb-4 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-gray-800 focus:border-[#B4B4B8] hover:shadow-md" />
 
               <label htmlFor="image" className="block font-medium text-gray-900 mb-2">Upload Image:</label>
-              <input type="file" name="image" id="image" accept="image/*" required className="block w-full text-sm text-slate-500 file:mr-4 file:py-1 mb-5 file:px-4 file:rounded-md  file:border-0 file:font-semibold file:bg-gray-700 file:text-white file:text-xl ring-hover:file:bg-violet-100" />
+              <input type="file" name="image" id="image" accept="image/*" required className="block w-full text-sm text-slate-500 file:mr-4 file:py-1 mb-5 file:px-4 file:rounded-md  file:border-0 file:font-semibold file:bg-[#0ea5e9] file:text-white file:text-xl ring-hover:file:bg-violet-100" />
 
               <div className="flex flex-row">
                 <div className="flex flex-col mr-2">
@@ -61,7 +61,7 @@ const Sell = () => {
               <label htmlFor="price" className="block font-medium text-gray-500 mb-2">price</label>
               <input type="number" name="price" id="price" required className="block w-full p-2 mb-4 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-gray-800 focus:border-[#B4B4B8] hover:shadow-md" />
 
-              <button type="submit" className="w-full py-3 px-4 bg-gray-800 hover:bg-gray-700 hover:shadow-xl text-white font-bold rounded-lg text-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800">Post now</button>
+              <button type="submit" className="w-full py-3 px-4 bg-[#0ea5e9] hover:bg-[#38caff] hover:shadow-xl text-white font-bold rounded-lg text-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800">Post now</button>
             </form>
           </div>
         </div>

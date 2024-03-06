@@ -69,7 +69,7 @@ const SignUpForm = () => {
                                         <input type="number" value={phoneNo} id="phoneNO" onChange={(e) => { setPhoneNo(e.target.value) }} placeholder="Mobile No." required className="block border border-gray-300 w-full p-3 rounded mb-4 hover:shadow-md hover:border-gray-400" />
                                     </label>
                                 </div>
-                                <button type="submit" className="w-full py-3 px-4 bg-gray-800 hover:bg-gray-700 hover:shadow-xl text-white font-bold rounded-lg text-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800">Create Account</button>
+                                <button type="submit" className="w-full py-3 px-4 bg-[#0ea5e9] hover:bg-[#38caff] hover:shadow-xl text-white font-bold rounded-lg text-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800">Create Account</button>
                             </div>
                         </form>
                     </div>
