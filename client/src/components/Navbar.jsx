@@ -32,7 +32,7 @@ const NavLinks = ({ handleClick }) => (
             <NavLink
                 key={item.name}
                 to={item.to}
-                className="flex flex-row justify-start items-center my-8 text-sm font-medium text-gray-300 hover:text-white"
+                className="flex flex-row justify-start items-center my-8 text-sm font-medium text-blue-950 hover:text-white"
                 onClick={() => handleClick && handleClick()}
             >
                 <item.icon className="w-6 h-6 mr-2" />
@@ -79,7 +79,7 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
-            <div className={`absolute top-0 h-screen w-1/3 bg-gradient-to-t from-white to-[#303030] backdrop-blur-xl z-10 p-6 md:hidden smooth-transition ${mobileMenuOpen ? 'left-0' : '-left-full'}`}>
+            <div className={`absolute top-0 h-screen w-1/3 bg-gradient-to-t from-[#38caff] to-[#0ea5e9] backdrop-blur-xl z-10 p-6 md:hidden smooth-transition ${mobileMenuOpen ? 'left-0' : '-left-full'}`}>
                 <img src={logo} alt="logo" className="w-full h-14 object-contain" />
                 <NavLinks handleClick={() => setMobileMenuOpen(false)} />
             </div>
